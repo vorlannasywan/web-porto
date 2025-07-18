@@ -22,7 +22,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@3.107.8.53 << 'EOF'
             cd /var/www/porto/web-porto
-            git pull origin master
+            sudo git pull origin master 
             # Restart Nginx or any other service if needed
             sudo systemctl restart nginx
           EOF
